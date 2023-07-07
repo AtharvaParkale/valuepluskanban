@@ -26,7 +26,7 @@ function Board() {
   //Getting all the cards from backend
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:4003/api/v1/cards");
+      const response = await axios.get("https://kanban-apis-873t.onrender.com/api/v1/cards");
       setData(response.data.cards);
       setLoader(false);
     } catch (e) {
@@ -38,7 +38,7 @@ function Board() {
   const handleDeleteCard = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:4003/api/v1/card/${id}`
+        `https://kanban-apis-873t.onrender.com/api/v1/card/${id}`
       );
       setData(response.data.cards);
       console.log("Data deleted successfully !");
@@ -55,7 +55,7 @@ function Board() {
       };
 
       const response = await axios.post(
-        "http://localhost:4003/api/v1/card/new",
+        "https://kanban-apis-873t.onrender.com/api/v1/card/new",
         card
       );
       setTitle("");
@@ -74,7 +74,7 @@ function Board() {
       };
 
       const response = await axios.put(
-        `http://localhost:4003/api/v1/card/task/${id}`,
+        `https://kanban-apis-873t.onrender.com/api/v1/card/task/${id}`,
         card
       );
       setDescription("");
@@ -95,7 +95,7 @@ function Board() {
         id: taskId,
       };
       const response = await axios.put(
-        `http://localhost:4003/api/v1/card/subTask/${dataId}`,
+        `https://kanban-apis-873t.onrender.com/api/v1/card/subTask/${dataId}`,
         task
       );
       setData(response.data.cards);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Card, Divider, Popover, Typography } from "@mui/material";
+import { Box, Card, Divider, Popover, Typography } from "@mui/material";
 import { useState } from "react";
 import Draggable from "react-draggable";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
@@ -45,7 +45,7 @@ const DraggableCard = ({
     <Draggable>
       <Card
         style={{
-          width:"21vw",
+          width: "21vw",
           backgroundColor: "rgb(235 236 240)",
           color: "black",
           height: "73vh",
@@ -62,20 +62,22 @@ const DraggableCard = ({
         <Box
           className="card-header-container"
           sx={{
-            borderBottom:"2px solid #c7c7c7",
+            borderBottom: "2px solid #c7c7c7",
             width: "85%",
             height: "7%",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            paddingBottom:"1.3vh"
+            paddingBottom: "1.3vh",
           }}
         >
           <Box
             className="header-div-1"
-            sx={{
-              // border: "2px solid black",
-            }}
+            sx={
+              {
+                // border: "2px solid black",
+              }
+            }
           >
             <Typography
               sx={{
@@ -88,9 +90,11 @@ const DraggableCard = ({
           </Box>
           <Box
             className="header-div-1"
-            sx={{
-              // border: "2px solid black",
-            }}
+            sx={
+              {
+                // border: "2px solid black",
+              }
+            }
           >
             <MoreHorizIcon
               aria-describedby={id}
@@ -225,7 +229,7 @@ const DraggableCard = ({
                     <DeleteIcon
                       sx={{
                         fontSize: "17px",
-                        color:"#000000a6!important"
+                        color: "#000000a6!important",
                       }}
                       onClick={() => {
                         handleDeleteSubTask(data._id, task._id);
